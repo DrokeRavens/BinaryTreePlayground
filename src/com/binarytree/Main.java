@@ -13,11 +13,15 @@ public class Main {
             else
                 arvore.AddNode(values[i], root);
         }
-        arvore.Delete(root, 9, null);
+
         arvore.Exibir(SearchType.MAIOR, root);
         arvore.Exibir(SearchType.MENOR, root);
         arvore.Exibir(SearchType.INORDEM, root);
         arvore.Exibir(SearchType.POSORDEM, root);
         arvore.Exibir(SearchType.PREORDEM, root);
+        arvore.Delete(root, 9, null);
+        arvore.Delete(root, 36,null);
+        System.out.println("Após exclusão");
+        arvore.Exibir(SearchType.INORDEM, root);
     }
 }
