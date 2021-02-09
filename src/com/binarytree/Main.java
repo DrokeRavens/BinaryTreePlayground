@@ -3,11 +3,15 @@ package com.binarytree;
 public class Main {
 
     public static void main(String[] args) {
-        int[] values = new int[] { 20, 5, 12, 36, 27, 45, 9, 2, 6, 17, 40, 9999 };
+        int[] values = new int[] { 20, 5, 12, 36, 27, 45, 9, 2, 6, 17, 40 };
         ArvoreBinaria arvore = new ArvoreBinaria();
         Node root = null;
-        for (int value: values) {
-            root = arvore.AddNode(value, root);
+
+        for(int i = 0; i < values.length; i++){
+            if( i == 0)
+                root = arvore.AddNode(values[0], root);
+            else
+                arvore.AddNode(values[i], root);
         }
 
         arvore.Exibir(SearchType.MAIOR, root);
