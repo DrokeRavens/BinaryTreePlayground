@@ -13,7 +13,7 @@ public class Main {
             else
                 arvore.AddNode(values[i], root);
         }
-
+        arvore.Delete(root, 9, null);
         arvore.Exibir(SearchType.MAIOR, root);
         arvore.Exibir(SearchType.MENOR, root);
         arvore.Exibir(SearchType.INORDEM, root);
